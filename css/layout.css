@@ -33,17 +33,208 @@
 /* 기본 구조 */
 body {
     font-family: 'kakaoBig';
+    word-break: keep-all;
+    word-wrap: break-word;
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 52px;
 }
 h2 {
-    font-size: 48px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 52px;
+}
+h2::before {
+    content: '';
+    display: block;
+    width: 78px;
+    height: 78px;
 }
 
 .btn-group {
     font-size: 0;
+}
+
+strong {
+    font-weight: 700;
+}
+
+/* 아래 스페셜은 슬라이드에 마저 사용하고 제거 */
+.special {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 카드형 공통 */
+div[class^='card-frame'] > .item {
+    background: #f3f3f3;
+}
+div[class^='card-frame'] > .item.sub-frame {
+    background: #fff;
+}
+div[class*='card-mix'] > div:not(:first-child) {
+    margin-top: 16px;
+}
+
+/* 카드형 2열 */
+.card-frame2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.card-frame2 .item {
+    position: relative;
+    width: calc((100% - 16px) / 2);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* 카드형 3열 */
+.card-frame3 {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.card-frame3 .item {
+    position: relative;
+    width: calc((100% - 32px) / 3);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* 카드형 상하 구조 */
+.card-half .item {
+    border-radius: 36px;
+}
+.card-half .item .half-brief {
+    height: 46px;
+    padding: 40px 40px 0;
+}
+.card-half .item .half-brief .brief-img {
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+    margin-right: 12px;
+    vertical-align: top;
+}
+.card-half .item .half-brief .brief-title {
+    display: inline-block;
+    padding: 0 16px;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 14px;
+    line-height: 46px;
+}
+.card-half .item .half-brief .brief-date {
+    margin-left: 12px;
+    font-size: 14px;
+    color: #333333;
+}
+.card-half .item .half-info {
+    margin-top: 20px;
+}
+.card-half .item .half-info .info-title {
+    height: 210px;
+    padding: 0 40px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -0.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.card-half .item .half-info .info-tags {
+    padding: 21px 40px;
+    box-sizing: border-box;
+}
+.card-half .item .half-info .info-tags span {
+    color: var(--secondary-color);
+}
+.card-half .item .half-info .info-tags span ~ span {
+    margin-left: 8px;
+}
+.card-half .item .half-info .info-view {
+    width: 100%;
+    height: 314px;
+}
+.card-half .item .sns-group {
+    position: absolute;
+    top: 51px;
+    right: 30px;
+}
+.card-half .item .sns-group svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+}
+
+/* 카드형 내부 카드형 */
+.sub-frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+}
+.sub-frame .sub-item {
+    height: calc((100% - 16px) / 3);
+    border-radius: 20px;
+    background: #f3f3f3;
+}
+
+/* 카드형 타이틀 + 바로가기 기본디자인 */
+.card-basic {
+    height: 110px;
+}
+.card-basic .item .basic-flex {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 40px;
+    box-sizing: border-box;
+}
+.card-basic .item .basic-flex .title {
+    font-size: 26px;
+}
+.card-basic .item .basic-flex .link {
+    height: 24px;
+}
+.card-basic .item .basic-flex .link span {
+    font-size: 17px;
+}
+.card-basic .item .basic-flex .link svg {
+    margin: 0 0 -6px 8px;
+}
+
+/* 바로가기 링크 */
+.link-through {
+    text-align: center;
+}
+.link-through a {
+    display: inline-block;
+    height: 76px;
+    width: 316px;
+    border-radius: 38px;
+    background: #f3f3f3;
+    font-size: 0px;
+    line-height: 76px;
+}
+.link-through a span {
+    font-size: 22px;
+}
+.link-through a svg {
+    margin: 0 0 -5px 12px;
 }
 
 /* 기본 색상 */
@@ -82,7 +273,7 @@ header .header-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1316px;
+    max-width: 1712px;
     height: 85px;
     margin: 0 auto;
 }
@@ -129,6 +320,7 @@ header .gnb .depth01 li .depth02.active {
     top: 25px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1000;
 }
 header .gnb .depth01 li .depth02 li .depth02-link {
     font-size: 17px;

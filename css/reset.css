@@ -128,7 +128,7 @@ input:focus {
     outline: none;
 }
 a {
-    display: inline-block;
+    display: block;
     color: inherit;
     text-decoration: none;
 }
