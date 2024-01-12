@@ -61,6 +61,17 @@ strong {
     font-weight: 700;
 }
 
+/* header 영역 만큼 padding 값 부여 */
+main section:first-child {
+    padding-top: 92px;
+}
+
+/* section 중 가로 100% */
+main section[class*='fullW'] {
+    max-width: unset;
+    padding: unset;
+}
+
 /* 아래 스페셜은 슬라이드에 마저 사용하고 제거 */
 .special {
     display: -webkit-box;
@@ -112,6 +123,7 @@ div[class*='card-mix'] > div:not(:first-child) {
 /* 카드형 상하 구조 */
 .card-half .item {
     border-radius: 36px;
+    overflow: hidden;
 }
 .card-half .item .half-brief {
     height: 46px;
@@ -194,7 +206,7 @@ div[class*='card-mix'] > div:not(:first-child) {
 
 /* 카드형 타이틀 + 바로가기 기본디자인 */
 .card-basic {
-    height: 110px;
+    height: inherit;
 }
 .card-basic .item .basic-flex {
     display: flex;
@@ -246,6 +258,9 @@ div[class*='card-mix'] > div:not(:first-child) {
 .col000 {
     color: #000;
 }
+.colfff {
+    color: #fff;
+}
 
 /* skip-navi */
 .skip-navi a {
@@ -265,16 +280,23 @@ div[class*='card-mix'] > div:not(:first-child) {
 
 /* header */
 header {
-    /* border-bottom: 1px solid #eee; */
+    position: fixed;
+    width: 100%;
+    border-bottom: none;
     padding: 0 20px;
+    background: #fff;
     letter-spacing: -0.5px;
+    z-index: 1000;
+}
+header.border {
+    border-bottom: 1px solid #eee;
 }
 header .header-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1712px;
-    height: 85px;
+    height: 92px;
     margin: 0 auto;
 }
 header .home a {
@@ -284,12 +306,21 @@ header .home a {
 header .gnb .depth01 {
     display: flex;
     gap: 60px;
+    align-items: center;
 }
 header .gnb .depth01 li {
     position: relative;
 }
-header .gnb .depth01 li .depth01-link {
+header .gnb .depth01 > li > a {
+    height: 92px;
+    line-height: 92px;
     font-size: 17px;
+}
+header .gnb .depth01:hover > li > a {
+    color: #888;
+}
+header .gnb .depth01 > li:hover > a {
+    color: #000;
 }
 header .gnb .depth01 li .depth02 {
     display: none;
@@ -317,16 +348,17 @@ header .gnb .depth01 li .depth02.active {
     justify-content: space-between;
     gap: 24px;
     position: absolute;
-    top: 25px;
+    top: 60px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
 }
-header .gnb .depth01 li .depth02 li .depth02-link {
+header .gnb .depth01 li .depth02 li a {
     font-size: 17px;
+    line-height: 24px;
     color: #eee;
 }
-header .gnb .depth01 li .depth02 li .depth02-link:hover {
+header .gnb .depth01 li .depth02 li a:hover {
     font-weight: 700;
 }
 /* util */

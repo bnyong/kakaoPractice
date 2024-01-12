@@ -7,10 +7,6 @@
     margin: 0 auto;
     padding: 0 20px;
 }
-.main section[class*='fullW'] {
-    max-width: unset;
-    padding: unset;
-}
 .main section:not(:first-child) {
     margin-top: 120px;
 }
@@ -24,7 +20,7 @@
 /* 카톡으로 돌아보는 2023 */
 .main-visual {
     display: grid;
-    grid-template-columns: 5fr 206px;
+    grid-template-columns: 6fr 272px;
     gap: 16px;
 }
 .main-visual .video {
@@ -135,7 +131,7 @@
 }
 
 .main-visual .kakaoimpact {
-    height: 206px;
+    height: 272px;
 }
 .main-visual .kakaoimpact .kakaoimpact-swiper .swiper-slide {
     border-radius: 24px;
@@ -145,7 +141,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 206px;
+    height: 272px;
     text-align: center;
 }
 .main-visual .kakaoimpact .kakaoimpact-swiper .swiper-slide:nth-child(1) {
@@ -179,7 +175,7 @@
 }
 
 .main-visual .report {
-    height: 259px;
+    height: 340px;
 }
 .main-visual .report .report-swiper .swiper-slide {
     border-radius: 24px;
@@ -187,7 +183,7 @@
 }
 .main-visual .report .report-swiper .swiper-slide a {
     display: block;
-    height: 259px;
+    height: 340px;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -240,8 +236,8 @@
 }
 
 .main-visual .community {
-    width: 215px;
-    height: 124px;
+    width: 285px;
+    height: 164px;
 }
 .main-visual .community .community-swiper .swiper-slide {
     border-radius: 24px 24px 0 24px;
@@ -250,7 +246,7 @@
 }
 .main-visual .community .community-swiper .swiper-slide a {
     display: block;
-    height: 124px;
+    height: 164px;
     box-sizing: border-box;
 }
 .main-visual .community .community-swiper .swiper-slide a video {
@@ -410,13 +406,207 @@
 .main-todaynews .card-mix .todaynews .item .sns-group {
     top: 43px;
 }
+.main-todaynews .card-mix .card-basic {
+    height: 110px;
+}
 
 /* 약속과 책임 */
 .main-promise h2::before {
     background: url(/images/main/icon_main_promise.gif) no-repeat center center/cover;
 }
+.main-promise .card-frame3 .item .title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 292px;
+    height: 78px;
+    padding: 0 0 16px 16px;
+    border-radius: 0 0 0 36px;
+    background: #fff;
+    box-sizing: border-box;
+}
+.main-promise .card-frame3 .item .title::before,
+.main-promise .card-frame3 .item .title::after,
+.main-promise .card-frame3 .item .link::before,
+.main-promise .card-frame3 .item .link::after {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+}
+.main-promise .card-frame3 .item .title::before {
+    top: -2px;
+    left: -24px;
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M0 2c13.3 0 24 10.7 24 24h2V0H0v2z' fill='%23fff' clip-rule='evenodd'/%3E%3C/svg%3E");
+}
+.main-promise .card-frame3 .item .title::after {
+    right: -2px;
+    bottom: -24px;
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M0 2c13.3 0 24 10.7 24 24h2V0H0v2z' fill='%23fff' clip-rule='evenodd'/%3E%3C/svg%3E");
+}
+.main-promise .card-frame3 .item .title span {
+    display: block;
+    background: tomato;
+    width: 100%;
+    height: 58px;
+    margin-top: 2px;
+    border-radius: 29px;
+    font-size: 17px;
+    line-height: 58px;
+    text-align: center;
+}
+.main-promise .card-frame3 .item .text {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    font-size: 26px;
+    line-height: 1.46;
+}
+.main-promise .card-frame3 .item .link {
+    position: absolute;
+    right: -2px;
+    bottom: 0;
+    width: 82px;
+    height: 82px;
+    padding: 16px 0 0 16px;
+    border-radius: 36px 0 0 0;
+    background: #fff;
+    box-sizing: border-box;
+}
+.main-promise .card-frame3 .item .link::before {
+    left: -24px;
+    bottom: -2px;
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M24 0c0 13.3-10.7 24-24 24v2h26V0h-2z' fill='%23fff' fill-rule='evenodd' clip-rule='evenodd'/%3E%3C/svg%3E");
+}
+.main-promise .card-frame3 .item .link::after {
+    top: -24px;
+    right: 0;
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M24 0c0 13.3-10.7 24-24 24v2h26V0h-2z' fill='%23fff' fill-rule='evenodd' clip-rule='evenodd'/%3E%3C/svg%3E");
+}
+.main-promise .card-frame3 .esg {
+    background: url(/images/main/main_promise01.gif) no-repeat center center/contain #89dcff;
+}
+.main-promise .card-frame3 .esg .title span {
+    background: #89dcff;
+}
+.main-promise .card-frame3 .activegreen {
+    background: url(/images/main/main_promise02.gif) no-repeat center center/322px 322px #03502b;
+}
+.main-promise .card-frame3 .activegreen .title span {
+    background: #1ed47e;
+}
+.main-promise .card-frame3 .magazine {
+    background: url(/images/main/main_promise03.gif) no-repeat center center/322px 322px #333;
+}
+.main-promise .card-frame3 .magazine .title span {
+    background: #fae100;
+}
 
 /* 무엇을 도와드릴까요? */
 .main-help h2::before {
     background: url(/images/main/icon_main_help.gif) no-repeat center center/cover;
+}
+.main-help .card-mix .card-frame3 {
+    height: 494px;
+}
+.main-help .card-mix .card-frame3 .sub-frame .sub-item {
+    position: relative;
+}
+.main-help .card-mix .card-frame3 .sub-frame .sub-item a {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding: 36px 40px 0;
+    box-sizing: border-box;
+}
+.main-help .card-mix .card-frame3 .sub-frame .sub-item a .title {
+    font-size: 26px;
+}
+.main-help .card-mix .card-frame3 .sub-frame .sub-item a .link {
+    display: block;
+    margin-top: 31px;
+    font-size: 17px;
+}
+.main-help .card-mix .card-frame3 .sub-frame .sub-item a .link span {
+    display: inline-block;
+    padding-top: 3px;
+    vertical-align: top;
+}
+.main-help .card-mix .card-frame3 .sub-frame .sub-item a img {
+    width: 100px;
+    height: 100px;
+    margin-top: -5px;
+}
+.main-help .card-mix .card-frame3 .news {
+    padding: 40px;
+    background: url(/images/main/main_help_news.png) no-repeat bottom center/264px auto #fae100;
+    box-sizing: border-box;
+}
+.main-help .card-mix .card-frame3 .news strong {
+    font-size: 26px;
+    line-height: 1.38;
+}
+.main-help .card-mix .card-frame3 .news .info-text {
+    display: inline-block;
+    margin-top: 24px;
+    font-size: 17px;
+    line-height: 1.58;
+}
+.main-help .card-mix .card-frame3 .news .socialmedia {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 41px;
+}
+.main-help .card-mix .card-frame3 .news .socialmedia a {
+    width: 80px;
+    height: 80px;
+}
+.main-help .card-mix .card-frame3 .crew {
+    padding: 40px;
+    background: url(/images/main/main_help_crew.png) no-repeat bottom center/100% auto #0073ff;
+    box-sizing: border-box;
+}
+.main-help .card-mix .card-frame3 .crew strong {
+    display: block;
+    font-size: 26px;
+    line-height: 1.38;
+}
+.main-help .card-mix .card-frame3 .crew .link {
+    display: inline-block;
+    margin-top: 24px;
+    font-size: 17px;
+}
+.main-help .card-mix .card-frame3 .crew .link span {
+    display: inline-block;
+    padding-top: 3px;
+    vertical-align: top;
+}
+.main-help .card-mix .card-frame2 .item {
+    height: 162px;
+}
+.main-help .card-mix .card-frame2 .item a {
+    display: flex;
+    justify-content: space-between;
+    height: inherit;
+    padding: 36px 40px 40px;
+    box-sizing: border-box;
+}
+.main-help .card-mix .card-frame2 .item a .title {
+    display: block;
+    font-size: 26px;
+}
+.main-help .card-mix .card-frame2 .item a .link {
+    display: inline-block;
+    margin-top: 35px;
+    font-size: 17px;
+}
+.main-help .card-mix .card-frame2 .item a .link span {
+    display: inline-block;
+    padding-top: 3px;
+    vertical-align: top;
+}
+.main-help .card-mix .card-frame2 .item a img {
+    width: 100px;
+    height: 100px;
+    margin-top: -5px;
 }
