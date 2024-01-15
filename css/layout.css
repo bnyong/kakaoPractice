@@ -388,23 +388,23 @@ footer {
 footer .footer-wrap {
     max-width: 1712px;
     margin: 0 auto;
+    padding: 81px 0 48px;
 }
 footer .sitemap {
     display: flex;
     justify-content: space-between;
-    margin-top: 81px;
 }
 footer .sitemap div {
     width: calc(100% / 5);
+    padding-top: 55px;
 }
 footer .sitemap div .title {
     display: block;
-    margin-top: 55px;
     font-weight: 700;
     line-height: 1.75;
 }
 footer .sitemap div ul {
-    margin-top: 95px;
+    margin-top: 40px;
 }
 footer .sitemap div span + ul {
     margin-top: 12px;
@@ -413,12 +413,25 @@ footer .sitemap div ul li ~ li {
     margin-top: 8px;
 }
 footer .sitemap div ul li a {
+    display: inline-block;
     font-size: 14px;
     line-height: 1.78;
     color: #888888;
 }
 footer .sitemap div ul li a:hover {
     color: var(--primary-color);
+}
+footer .sitemap div ul li a svg {
+    width: 9px;
+    height: 9px;
+    stroke: #999;
+    margin-left: 4px;
+}
+footer .sitemap div ul li a:hover svg {
+    stroke: var(--primary-color);
+}
+footer .sitemap .today-kakao {
+    padding-top: 0;
 }
 footer .sitemap .today-kakao h2 {
     display: block;
@@ -441,25 +454,38 @@ footer .extra {
     justify-content: space-between;
     margin-top: 120px;
 }
-footer .extra .info .conditions {
+footer .extra .conditions {
     display: flex;
 }
-footer .extra .info .conditions div ~ div {
+footer .extra .conditions div ~ div {
     margin-left: 24px;
 }
-footer .extra .info .conditions div {
+footer .extra .conditions > div {
     display: flex;
     align-items: center;
     position: relative;
 }
-footer .extra .info .conditions div .title .arrow-down {
+footer .extra .conditions div .title {
+    font-size: 12px;
+    color: #888888;
+}
+footer .extra .conditions div .title strong {
+    color: #333333;
+}
+footer .extra .conditions div .title .arrow-down {
     width: 9px;
     height: 9px;
 }
-footer .extra .info .conditions div .title .arrow-down .stroke {
+footer .extra .conditions div .title:hover .arrow-down {
+    transform: rotate(180deg);
+}
+footer .extra .conditions div .title.on .arrow-down {
+    transform: rotate(180deg);
+}
+footer .extra .conditions div .title .arrow-down .stroke {
     stroke: #999;
 }
-footer .extra .info .conditions div ul {
+footer .extra .conditions div .link-icon {
     position: absolute;
     display: none;
     left: 0;
@@ -468,11 +494,99 @@ footer .extra .info .conditions div ul {
     border-radius: 12px;
     background: #eeeeee;
 }
-footer .extra .info .conditions div ul li ~ li {
+footer .extra .conditions div .link-icon.active {
+    display: block;
+}
+footer .extra .conditions div .link-icon ul li ~ li {
     margin-top: 12px;
 }
-footer .extra .info .conditions div ul li a {
+footer .extra .conditions div .link-icon ul li a {
     font-size: 12px;
+    line-height: 18px;
     color: var(--secondary-color);
     white-space: nowrap;
+}
+footer .extra .conditions div .link-icon ul li a:hover {
+    color: var(--primary-color);
+}
+footer .extra .conditions div .link-icon ul li a svg {
+    width: 9px;
+    height: 9px;
+    stroke: #999;
+    margin-left: 4px;
+}
+footer .extra .conditions div .link-icon ul li a:hover svg {
+    stroke: var(--primary-color);
+}
+footer .extra .relation {
+    position: relative;
+}
+footer .extra .relation .relation-site {
+    display: flex;
+    justify-content: space-between;
+    width: 258px;
+    padding: 10px 20px 12px;
+    border-radius: 24px;
+    font-size: 12px;
+    line-height: 18px;
+    background: #eee;
+    box-sizing: border-box;
+}
+footer .extra .relation .relation-site svg {
+    width: 14px;
+    height: 14px;
+    margin-top: 3px;
+    fill: #666;
+}
+footer .extra .relation .relation-site[data-relation='close'] svg {
+    transform: rotate(0deg);
+}
+footer .extra .relation .relation-site[data-relation='open'] svg {
+    transform: rotate(45deg);
+}
+footer .extra .relation .link-icon {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 52px;
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 12px;
+    background: #eee;
+    box-sizing: border-box;
+}
+footer .extra .relation .link-icon.active {
+    display: block;
+}
+footer .extra .relation .link-icon ul li ~ li {
+    margin-top: 12px;
+}
+footer .extra .relation .link-icon ul li a {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #666666;
+}
+footer .extra .relation .link-icon ul li a:hover {
+    color: var(--primary-color);
+}
+footer .extra .relation .link-icon ul li a svg {
+    width: 9px;
+    height: 9px;
+    stroke: #999;
+    margin-left: 4px;
+}
+footer .extra .relation .link-icon ul li a:hover svg {
+    stroke: var(--primary-color);
+}
+
+footer small {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #888888;
+}
+footer small a {
+    display: inline-block;
+    margin-left: 3px;
 }

@@ -260,9 +260,9 @@
     position: absolute;
     top: -2px;
     right: -2px;
-    width: 36px;
-    height: 128px;
-    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 128'%3E%3Cpath d='M33.3 119.9c-5.1 0-9.9-1.1-14.3-3.2-4.4 5.7-11.3 9.3-19 9.3v2h36V0H0v2c13.3 0 24 10.7 24 24v76.9c.4 7 3.9 13.1 9.3 17' fill='%23fff' fill-rule='evenodd' clip-rule='evenodd'/%3E%3C/svg%3E");
+    width: 39px;
+    height: 168px;
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 39 168'%3E%3Cpath d='M0 0v2c13.3 0 24 10.7 24 24v109.2c0 10.2 5 19.2 12.7 24.8-6.2 0-12.2-1.2-17.6-3.5C14.7 162.3 7.8 166 0 166v2h39V0H0z' fill='%23fff' fill-rule='evenodd' clip-rule='evenodd'/%3E%3C/svg%3E");
     z-index: 2;
 }
 .main-visual .community .community-swiper .swiper-slide a .text-center {
@@ -274,8 +274,37 @@
     color: var(--white-color);
     z-index: 1;
 }
+.main-visual .community .community-swiper .swiper-slide a span:only-child {
+    padding: 90px 80px 0;
+    box-sizing: border-box;
+    color: var(--primary-color);
+}
+.main-visual .community .community-swiper .swiper-slide a .commu {
+    background: url(/images/main/main_community01.webp) no-repeat center top;
+}
+.main-visual .community .community-swiper .swiper-slide a .histo {
+    background: url(/images/main/main_community02.webp) no-repeat center top;
+}
+.main-visual .community .community-swiper .swiper-button-next,
+.main-visual .community .community-swiper .swiper-button-prev {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    --swiper-navigation-size: 0px;
+}
 .main-visual .community .community-swiper .swiper-button-next {
-    background: url(/images/);
+    right: 22px;
+    background: url(/images/icon_swiper_arrow_right.svg) no-repeat center center/cover;
+}
+.main-visual .community .community-swiper .swiper-button-next::after {
+    display: none;
+}
+.main-visual .community .community-swiper .swiper-button-prev {
+    background: url(/images/icon_swiper_arrow_left.svg) no-repeat center center/cover;
+}
+.main-visual .community .community-swiper .swiper-button-prev::after {
+    display: none;
 }
 
 /* 카카오 공동체가 축적해 온 이야기들 */

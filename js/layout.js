@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     let headerAct = true;
-
     window.addEventListener('scroll', () => {
         let currentScrollY = window.pageYOffset;
         const header = document.querySelector('header');
@@ -43,6 +42,54 @@ document.addEventListener('DOMContentLoaded', () => {
                 header.classList.remove('border');
                 headerAct = true;
             }
+        }
+    });
+
+    // sitemap icon, extra icon 추가
+    const linkIcons = document.querySelectorAll('.link-icon ul li a');
+
+    linkIcons.forEach((linkIcon) => {
+        let icon =
+            '<svg data-v-c1d21be8="" data-v-2bc73610="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" class="ico_outlink"><g data-v-c1d21be8="" fill="none" fill-rule="evenodd"><path data-v-c1d21be8="" d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" transform="translate(-935 -867) translate(836 848) translate(14 14) translate(85 5)"></path></g></svg>';
+
+        if (!linkIcon.classList.contains('icon-none')) {
+            linkIcon.insertAdjacentHTML('beforeend', icon);
+        }
+    });
+
+    // 약관 리스트 노출
+    const conditions = document.querySelectorAll('.conditions div button[data-condition="button"]');
+
+    conditions.forEach((condition) => {
+        const conditionLinks = document.querySelectorAll('.extra .conditions .link-icon');
+
+        condition.addEventListener('click', () => {
+            if (condition.nextElementSibling.classList.contains('active')) {
+                condition.nextElementSibling.classList.remove('active');
+                condition.classList.remove('on');
+            } else {
+                conditionLinks.forEach((conditionLink) => {
+                    conditionLink.classList.remove('active');
+                    conditions.forEach((e) => {
+                        e.classList.remove('on');
+                    });
+                });
+                condition.nextElementSibling.classList.add('active');
+                condition.classList.add('on');
+            }
+        });
+    });
+
+    // 관련사이트 노출
+    const relationbtn = document.querySelector('.relation .relation-site');
+
+    relationbtn.addEventListener('click', () => {
+        if (relationbtn.dataset.relation == 'close') {
+            relationbtn.setAttribute('data-relation', 'open');
+            relationbtn.nextElementSibling.classList.add('active');
+        } else {
+            relationbtn.setAttribute('data-relation', 'close');
+            relationbtn.nextElementSibling.classList.remove('active');
         }
     });
 });
