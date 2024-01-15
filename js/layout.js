@@ -27,29 +27,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    let headerAct = true;
+
     window.addEventListener('scroll', () => {
         let currentScrollY = window.pageYOffset;
         const header = document.querySelector('header');
-        let headerAct = true;
-        let currentAct = false;
+        let currentAct = 0;
 
         currentScrollY > header.offsetTop ? (currentAct = true) : (currentAct = false);
-        console.log(headerAct, '1');
         if (headerAct === currentAct) {
             if (currentAct) {
                 header.classList.add('border');
-                console.log('add');
-                console.log(headerAct, '2');
+                headerAct = false;
             } else {
                 header.classList.remove('border');
-                console.log('remove');
                 headerAct = true;
-                console.log(headerAct);
             }
-            console.log(headerAct, '3');
-            headerAct = false;
         }
-        console.log(headerAct, '4');
-        console.log(currentAct, '5');
     });
 });

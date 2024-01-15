@@ -380,3 +380,99 @@ header .util button svg {
     stroke: var(--primary-color);
     vertical-align: middle;
 }
+
+/* footer */
+footer {
+    border-top: 1px solid var(--primary-color);
+}
+footer .footer-wrap {
+    max-width: 1712px;
+    margin: 0 auto;
+}
+footer .sitemap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 81px;
+}
+footer .sitemap div {
+    width: calc(100% / 5);
+}
+footer .sitemap div .title {
+    display: block;
+    margin-top: 55px;
+    font-weight: 700;
+    line-height: 1.75;
+}
+footer .sitemap div ul {
+    margin-top: 95px;
+}
+footer .sitemap div span + ul {
+    margin-top: 12px;
+}
+footer .sitemap div ul li ~ li {
+    margin-top: 8px;
+}
+footer .sitemap div ul li a {
+    font-size: 14px;
+    line-height: 1.78;
+    color: #888888;
+}
+footer .sitemap div ul li a:hover {
+    color: var(--primary-color);
+}
+footer .sitemap .today-kakao h2 {
+    display: block;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.38;
+}
+footer .sitemap .today-kakao h2::before {
+    display: none;
+}
+footer .sitemap .today-kakao ul {
+    margin-top: 20px;
+}
+footer .sitemap .today-kakao ul li a {
+    color: var(--primary-color);
+}
+
+footer .extra {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+}
+footer .extra .info .conditions {
+    display: flex;
+}
+footer .extra .info .conditions div ~ div {
+    margin-left: 24px;
+}
+footer .extra .info .conditions div {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+footer .extra .info .conditions div .title .arrow-down {
+    width: 9px;
+    height: 9px;
+}
+footer .extra .info .conditions div .title .arrow-down .stroke {
+    stroke: #999;
+}
+footer .extra .info .conditions div ul {
+    position: absolute;
+    display: none;
+    left: 0;
+    bottom: 30px;
+    padding: 16px 20px;
+    border-radius: 12px;
+    background: #eeeeee;
+}
+footer .extra .info .conditions div ul li ~ li {
+    margin-top: 12px;
+}
+footer .extra .info .conditions div ul li a {
+    font-size: 12px;
+    color: var(--secondary-color);
+    white-space: nowrap;
+}
