@@ -81,15 +81,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 관련사이트 노출
-    const relationbtn = document.querySelector('.relation .relation-site');
+    const relationBtn = document.querySelector('.relation .relation-site');
 
-    relationbtn.addEventListener('click', () => {
-        if (relationbtn.dataset.relation == 'close') {
-            relationbtn.setAttribute('data-relation', 'open');
-            relationbtn.nextElementSibling.classList.add('active');
+    relationBtn.addEventListener('click', () => {
+        if (relationBtn.dataset.relation == 'close') {
+            relationBtn.setAttribute('data-relation', 'open');
+            relationBtn.nextElementSibling.classList.add('active');
         } else {
-            relationbtn.setAttribute('data-relation', 'close');
-            relationbtn.nextElementSibling.classList.remove('active');
+            relationBtn.setAttribute('data-relation', 'close');
+            relationBtn.nextElementSibling.classList.remove('active');
         }
+    });
+
+    // search 클릭 시 검색창 노출
+    const searchBtn = document.querySelector('.util .btn-group .search');
+    const closeBtn = document.querySelector('.search-header .close');
+    const headerOpen = document.querySelector('header');
+    const searchContainer = document.querySelector('.search-container');
+    const searchContainerWrap = searchContainer.querySelector('.container-wrap');
+    const sectionFirst = document.querySelector('main section:first-child');
+
+    searchBtn.addEventListener('click', () => {
+        headerOpen.classList.remove('active');
+        searchContainer.classList.add('active');
+        searchContainerWrap.style.top = `0px`;
+        sectionFirst.style.paddingTop = `${searchContainerWrap.offsetHeight}px`;
+    });
+    closeBtn.addEventListener('click', () => {
+        headerOpen.classList.add('active');
+        searchContainer.classList.remove('active');
+        searchContainerWrap.style.top = `-452px`;
+        sectionFirst.style.paddingTop = `92px`;
     });
 });
