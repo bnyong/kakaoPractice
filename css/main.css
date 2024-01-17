@@ -373,6 +373,9 @@
     height: 150px;
     margin-top: 12px;
 }
+.main-story .slide .half-leftright .item .half-info .info-tags {
+    padding: 255px 40px 33px;
+}
 .main-story .slide .half-leftright .item .leftright-link {
     display: flex;
     justify-content: space-between;

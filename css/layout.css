@@ -35,6 +35,7 @@ body {
     font-family: 'kakaoBig';
     word-break: keep-all;
     word-wrap: break-word;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -664,7 +665,7 @@ footer small a {
 }
 .search-container .search-content {
     padding: 120px 0;
-    background: url(/images/search_background.png) no-repeat right 85px/162px 178px;
+    background: url(/images/search_background.png) no-repeat 1120px 85px/162px 178px;
 }
 .search-container .search-content form {
     position: relative;

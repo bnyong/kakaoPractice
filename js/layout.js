@@ -104,15 +104,18 @@ document.addEventListener('DOMContentLoaded', () => {
     searchContainerWrap.style.top = `-${searchContainerWrap.offsetHeight}px`;
 
     searchBtn.addEventListener('click', () => {
+        window.scrollTo(0, 0);
         headerOpen.classList.remove('active');
         searchContainer.classList.add('active');
         searchContainerWrap.style.top = `0px`;
         sectionFirst.style.paddingTop = `${searchContainerWrap.offsetHeight}px`;
+        document.querySelector('body').style.overflowY = 'hidden';
     });
     closeBtn.addEventListener('click', () => {
         headerOpen.classList.add('active');
         searchContainer.classList.remove('active');
         searchContainerWrap.style.top = `-${searchContainerWrap.offsetHeight}px`;
         sectionFirst.style.paddingTop = `92px`;
+        document.querySelector('body').style.overflowY = 'scroll';
     });
 });
