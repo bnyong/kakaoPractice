@@ -101,6 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchContainerWrap = searchContainer.querySelector('.container-wrap');
     const sectionFirst = document.querySelector('main section:first-child');
 
+    searchContainerWrap.style.top = `-${searchContainerWrap.offsetHeight}px`;
+
     searchBtn.addEventListener('click', () => {
         headerOpen.classList.remove('active');
         searchContainer.classList.add('active');
@@ -110,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     closeBtn.addEventListener('click', () => {
         headerOpen.classList.add('active');
         searchContainer.classList.remove('active');
-        searchContainerWrap.style.top = `-452px`;
+        searchContainerWrap.style.top = `-${searchContainerWrap.offsetHeight}px`;
         sectionFirst.style.paddingTop = `92px`;
     });
 });

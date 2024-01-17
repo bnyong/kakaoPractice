@@ -136,7 +136,6 @@ div[class*='card-mix'] > div:not(:first-child) {
     overflow: hidden;
 }
 .card-half .item .half-brief {
-    height: 46px;
     padding: 40px 40px 0;
 }
 .card-half .item .half-brief .brief-img {
@@ -168,7 +167,7 @@ div[class*='card-mix'] > div:not(:first-child) {
     font-size: 30px;
     font-weight: 700;
     line-height: 1.4;
-    letter-spacing: -0.6;
+    letter-spacing: -0.6px;
     display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
@@ -177,9 +176,11 @@ div[class*='card-mix'] > div:not(:first-child) {
 }
 .card-half .item .half-info .info-tags {
     padding: 21px 40px;
+    font-size: 0;
     box-sizing: border-box;
 }
 .card-half .item .half-info .info-tags span {
+    font-size: 16px;
     color: var(--secondary-color);
 }
 .card-half .item .half-info .info-tags span ~ span {
@@ -187,7 +188,7 @@ div[class*='card-mix'] > div:not(:first-child) {
 }
 .card-half .item .half-info .info-view {
     width: 100%;
-    height: 314px;
+    aspect-ratio: 16/9;
 }
 .card-half .item .sns-group {
     position: absolute;
@@ -624,7 +625,7 @@ footer small a {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: #fff;
     opacity: 0;
     transition: all 0.6s;
@@ -636,11 +637,11 @@ footer small a {
 }
 .search-container .container-wrap {
     position: relative;
-    top: -452px;
-    max-width: 1296px;
+    /* top: -452px; */
     margin: 0 auto;
+    padding: 0 208px;
     background: var(--white-color);
-    transition: all 0.8s ease-out;
+    transition: all 0.6s ease-out;
     z-index: 100;
 }
 .search-container .search-header {
@@ -667,6 +668,12 @@ footer small a {
 }
 .search-container .search-content form {
     position: relative;
+    opacity: 0;
+    transition: all 1s;
+}
+.search-container.active .search-content form {
+    position: relative;
+    opacity: 1;
 }
 .search-container .search-content form svg {
     position: absolute;

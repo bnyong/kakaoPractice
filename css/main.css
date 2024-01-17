@@ -307,13 +307,82 @@
     display: none;
 }
 
-/* 카카오 공동체가 축적해 온 이야기들 */
+/* 카카오와 공동체가 축적해 온 이야기들 */
 .main-story h2 {
     max-width: 1712px;
     margin: 0 auto;
 }
 .main-story h2::before {
     background: url(/images/main/icon_main_story.gif) no-repeat center center/cover;
+}
+.main-story .slide ul {
+    display: flex;
+    overflow: hidden;
+}
+.main-story .slide ul li {
+    margin-left: 16px;
+    flex-shrink: 0;
+}
+.main-story .slide .card-half {
+    width: 412px;
+}
+.main-story .slide .card-half .item {
+    position: relative;
+    border-radius: 24px;
+    background: #f3f3f3;
+}
+.main-story .slide .card-half .item .half-brief .brief-img {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+.main-story .slide .card-half .item .half-brief .brief-title {
+    line-height: 31px;
+    padding: 0 12px;
+}
+.main-story .slide .card-half .item .half-info {
+    margin-top: 12px;
+}
+.main-story .slide .card-half .item .half-info .info-title {
+    height: 130px;
+    line-height: 1.38;
+    -webkit-line-clamp: 3;
+}
+.main-story .slide .card-half .item .half-info .info-title strong {
+    font-size: 26px;
+}
+.main-story .slide .card-half .item .half-info .info-tags {
+    padding: 41px 40px 33px;
+    font-size: 0;
+    box-sizing: border-box;
+}
+.main-story .slide .card-half .item .sns-group {
+    top: 45px;
+    right: 30px;
+}
+.main-story .slide .half-updown .item .sns-group {
+    top: 275px;
+}
+.main-story .slide .half-leftright {
+    width: 953px;
+}
+.main-story .slide .half-leftright .item .half-info {
+    margin-top: 0;
+}
+.main-story .slide .half-leftright .item .half-info .info-title {
+    height: 150px;
+    margin-top: 12px;
+}
+.main-story .slide .half-leftright .item .leftright-link {
+    display: flex;
+    justify-content: space-between;
+}
+.main-story .slide .half-leftright .item .leftright-link .info-title p {
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.62;
+    color: #666;
 }
 
 /* 더 나은 세상을 만드는 카카오 서비스 */
